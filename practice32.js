@@ -5,16 +5,13 @@ Input: "i love javascript"
 Output: "I Love Javascript"
 */
 function capitalizeWords(text){
-    let result =  '';
-    let capitalizeNext = true;
-    for(let i =0; i<text.length; i++){
-        if(text[i]===''){
-            result += text[i];
-            capitalizeNext = true;
-        }
-        else {}
-        }
+    let words = text.split(' ');
+    for(let i =0; i<words.length;i++){
+        words[i]= words[i].charAt(0).toUpperCase() + words[i].slice(1);
+
     }
+    return words.join(' ');
+}
 
 
 let text = 'i love javascript';
